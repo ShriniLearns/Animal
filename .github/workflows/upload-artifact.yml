@@ -1,0 +1,19 @@
+name: Upload Artifact
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Upload artifact
+      run: |
+        echo "Uploading artifact..."
+        ./upload_artifact.sh
