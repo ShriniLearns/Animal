@@ -15,6 +15,5 @@ access_token="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"
 curl -X POST \
   -H "Authorization: token $access_token" \
   -H "Content-Type: application/octet-stream" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
   --data-binary "@$file_path" \
-  "https://api.github.com/repos/$repository_owner/$repository_name/contents/$file_path"
+  "https://uploads.github.com/repos/$repository_owner/$repository_name/contents/$file_path"
