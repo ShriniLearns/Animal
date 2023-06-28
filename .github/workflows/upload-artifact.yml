@@ -14,5 +14,4 @@ jobs:
     - name: Upload artifact
       run: |
         echo "Uploading artifact..."
-        ./upload_artifact.sh
-        chmod +x upload_artifact.sh
+        chmod +x ./github/workflows/upload_artifact.sh
