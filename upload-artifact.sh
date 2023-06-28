@@ -1,18 +1,19 @@
 #!/bin/bash
 
-# URL to the output file
+# File path and name
+file_path="/Users/shrinidhigcw/IdeaProjects/Animal/pom.xml"
+#file_name="file.txt"
 
-# Path to save the downloaded output file
-output_directory="/Users/shrinidhigcw/IdeaProjects/Animal/pom.xml"
-output_file="$output_directory/file.txt"
+# GitHub repository information
+repository_owner="shrinidhi-demo"
+repository_name="Animal"
 
-# Download the output file using curl
-curl -o "$output_file" 
+# Personal access token (PAT) with repository scope
+access_token="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"
 
-# Verify if the file was downloaded successfully
-if [ -f "$output_file" ]; then
-  echo "Output file downloaded successfully."
-  # Add your desired actions with the downloaded output file here
-else
-  echo "Error: Failed to download the output file."
-fi
+# Upload file to GitHub repository using curl
+curl -X POST \
+  -H "Authorization: token $access_token" \
+  -H "Content-Type: application/octet-stream" \
+  --data-binary "@$file_path" \
+  "https://uploads.github.com/repos/$repository_owner/$repository_name/contents/$file_path"
