@@ -16,4 +16,4 @@ curl -X POST \
   -H "Authorization: token $access_token" \
   -H "Content-Type: application/octet-stream" \
   --data-binary "@$file_path" \
-  "https://uploads.github.com/repos/$repository_owner/$repository_name/contents/$file_path"
+  "https://api.github.com/$repository_owner/$repository_name/repos/contents/$file_path"
