@@ -19,5 +19,9 @@ public class Animal {
         Animal guzo = new Animal();
         guzo.info("white", 6, 35);
         guzo.display();
+
+        Animal fonto = new Animal();
+        fonto.info("black",4,40);
+        fonto.display();
     }
 }
