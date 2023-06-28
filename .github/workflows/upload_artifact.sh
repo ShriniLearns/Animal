@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # File path and name
-file_path="/Users/shrinidhigcw/IdeaProjects/Animal/pom.xml"
-#file_name="file.txt"
+file_path="/Users/shrinidhigcw/IdeaProjects/Animal"
+file_name="pom.xml"
 
 # GitHub repository information
 repository_owner="shrinidhi-demo"
@@ -16,4 +16,4 @@ curl -X POST \
   -H "Authorization: token $access_token" \
   -H "Content-Type: application/octet-stream" \
   --data-binary "@$file_path" \
-  "https://api.github.com/$repository_owner/$repository_name/repos/contents/$file_path"
+  "https://api.github.com/$repository_owner/$repository_name/repos/contents/$file_name"
