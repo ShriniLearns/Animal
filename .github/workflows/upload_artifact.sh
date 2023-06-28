@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # File path and name
-file_path="/Users/shrinidhigcw/IdeaProjects/Animal"
+file_path="https://github.com/shrinidhi-demo/Animal/blob/bb708e8a6b370f14f6fcfe4b90e20d9e0f5a14e8"
 file_name="pom.xml"
 
 # GitHub repository information
