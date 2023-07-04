@@ -7,4 +7,4 @@ curl -L \
   -H "Authorization: Bearer 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" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/repos/shrinidhi-demo/Animal/actions/workflows/workflow2.yml/dispatches \
-  -d "{"ref":"main"}"
+  -d '{"ref":"main"}'
