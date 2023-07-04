@@ -12,10 +12,11 @@ CHILD_WORKFLOW_NAME="workflow2.yml"
 LATEST_COMMIT_SHA=$(git rev-parse --verify HEAD)
 
 # Trigger the child workflow using the GitHub API
-curl -X POST \
+curl -L \
+  -X POST \
   -H "Accept: application/vnd.github.v3+json" \
-  -H "Authorization: token ${GITHUB_API_TOKEN}" \
+  -H "Authorization: Bearer ${GITHUB_API_TOKEN}" \
   "https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/actions/workflows/${CHILD_WORKFLOW_NAME}/dispatches" \
-  -d "{\"ref\":\"main\",\"inputs\":{ \"commit_sha\": \"${LATEST_COMMIT_SHA}\" }}"
+  -d "{"ref":"main","inputs":{ "commit_sha": "${LATEST_COMMIT_SHA}" }}"
 
 echo "Child workflow triggered successfully."

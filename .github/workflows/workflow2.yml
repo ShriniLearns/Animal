@@ -1,6 +1,10 @@
 name: workflow2
 on:
   workflow_dispatch:
+    inputs:
+      commit_sha:
+        required: true
+        type : string
 
 jobs:
   build:
@@ -9,5 +13,3 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      # Add your desired steps for the child workflow
