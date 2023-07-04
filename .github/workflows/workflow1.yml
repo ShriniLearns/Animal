@@ -15,7 +15,8 @@ jobs:
 
       - name: Trigger Shell script
         run: |
-          echo "Triggering shell script..."
-          chmod +x ./.github/workflows/trigger_workflow2.sh
-
+            sh ./trigger_workflow2.sh
+          # chmod +x ./.github/workflows/trigger_workflow2.sh
+          # echo "Triggering shell script..."
       # Add your desired steps for the parent workflow
+      
