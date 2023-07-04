@@ -1,0 +1,21 @@
+name: workflow1
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Trigger Shell script
+        run: |
+          echo "Triggering shell script..."
+          chmod +x ./.github/workflows/trigger_workflow2.sh
+
+      # Add your desired steps for the parent workflow
