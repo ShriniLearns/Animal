@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 # Trigger the child workflow using the GitHub API
 curl -L \
   -X POST \
