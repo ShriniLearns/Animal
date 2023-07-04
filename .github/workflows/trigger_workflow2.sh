@@ -15,8 +15,9 @@ LATEST_COMMIT_SHA=$(git rev-parse --verify HEAD)
 curl -L \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
-  -H "Authorization: Bearer ${GITHUB_API_TOKEN}" \
-  "https://api.github.com/repos/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/actions/workflows/${CHILD_WORKFLOW_NAME}/dispatches" \
+  -H "Authorization: Bearer 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" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/repos/shrinidhi-demo/Animal/actions/workflows/workflow2.yml/dispatches \
   -d "{"ref":"main","inputs":{ "commit_sha": "${LATEST_COMMIT_SHA}" }}"
 
 echo "Child workflow triggered successfully."
