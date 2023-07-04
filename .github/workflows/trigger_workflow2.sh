@@ -15,7 +15,7 @@ LATEST_COMMIT_SHA=$(git rev-parse --verify HEAD)
 curl -L \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
-  -H "Authorization: Bearer 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" \
+  -H "Authorization: Bearer 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" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/repos/shrinidhi-demo/Animal/actions/workflows/workflow2.yml/dispatches \
   -d "{"ref":"main","inputs":{ "commit_sha": "${LATEST_COMMIT_SHA}" }}"
