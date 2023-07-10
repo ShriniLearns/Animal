@@ -24,7 +24,7 @@ jobs:
 
       - name: Build and Install APK
         run: |
-          adb install -r ./usr/local/automation/MobileApps/corbita_android.apk
+          adb install -r /usr/local/automation/MobileApps/corbita_android.apk
 
 #       - name: Run Test Cases
 #         run: |
