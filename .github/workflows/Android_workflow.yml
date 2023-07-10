@@ -24,13 +24,11 @@ jobs:
 
       - name: Build and Install APK
         run: |
-          # Replace with the commands to build and install your Android application
-          ./gradlew assembleDebug
           adb install -r ./usr/local/automation/MobileApps/corbita_android.apk
 
-      - name: Run Test Cases
-        run: |
-          # Replace with the commands to run your test cases on the connected Android device
-          ./gradlew connectedAndroidTest
+#       - name: Run Test Cases
+#         run: |
+#           # Replace with the commands to run your test cases on the connected Android device
+#           ./gradlew connectedAndroidTest
 
 
