@@ -1,0 +1,22 @@
+name: Performance_Script_Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+    
+    steps:
+     - name: Checkout Repository
+       uses: actions/checkout@v2
+       
+     - name: Set up JDK
+       uses: actions/setup-java@v2
+       with:
+          java-version: '11'
+          
+     - name: Run Performance script for Mount drive
+       run: |
+        mvn -Dtest=testng_mount_drive test
+    
