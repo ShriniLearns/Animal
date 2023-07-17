@@ -18,5 +18,13 @@ jobs:
           
      - name: Run Performance script for Mount drive
        run: |
-        mvn -Dtest=testng_mount_drive test
+         -DconfigFilePath=/Users/shrinidhigcw/Desktop/client-automation/src/main/resources/corbita/configs/desktop/mac/mac_install.yml
+         -DxmlSuiteFile=/Users/shrinidhigcw/Desktop/client-automation/src/main/resources/corbita/tests/desktop/perfromance/testng_verify_mountdrive.xml
+         -Ddataset=/Users/shrinidhigcw/Desktop/client-automation/src/main/resources/corbita/configs/desktop/mac/desktop_mac_node1.properties
+         -Dapplication=corbita
+         -Dversion=Phase0
+         -Dbuild=1.0.0
+         -Diterations=1
+         -Dhardware=macOS
+         mvn test
     
